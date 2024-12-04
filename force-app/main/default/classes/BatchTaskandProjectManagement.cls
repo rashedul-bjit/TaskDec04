@@ -51,6 +51,8 @@ global class BatchTaskandProjectManagement implements Database.Batchable<sObject
                 toAddresses[i] = sys_adm[i].Email;
             }
             mail.setToAddresses(toAddresses);
+
+            
     
             mail.setSubject('Due Date and Total Cost Updated!!!');
             mail.setPlainTextBody('Total number of tasks completed - ' + totalProcessed + ' records updated.\n' + 
